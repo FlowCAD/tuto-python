@@ -35,5 +35,5 @@ def clinique():
         print "Vous etes dans la salle d'operation. Sortez vite !"
     else:
         print "Vous n'avez choisi ni la droite ni la gauche, essayez encore !"
-        clinic()
+        clinique()
 clinique()
