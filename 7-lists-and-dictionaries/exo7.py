@@ -9,4 +9,12 @@ print (first, middle, last)
 animals = ["aardvark", "badger", "duck", "emu", "fennec fox"]
 duck_index = animals.index("duck")
 animals.insert(duck_index, "cobra")
-print animals 
+print animals
+
+# Using loops
+start_list = [5, 3, 1, 2, 4]
+square_list = []
+for number in start_list:
+	square_list.append(number ** 2)
+square_list.sort()
+print square_list
