@@ -35,5 +35,6 @@ def compute_bill(food):
 
 shopping_list = ["banana", "orange", "apple"]
 
-print calculate_stock_price(stock)
-print compute_bill(shopping_list)
+
+print 'The price of all the stock is: ' + str(calculate_stock_price(stock))
+print 'The price of my shopping list is: ' + str(compute_bill(shopping_list))
