@@ -28,7 +28,7 @@ def average(numbers):
 
 
 def get_average(student):
-  """calculate global average"""
+  """calculate global average for a student"""
   homework = average(student["homework"]) * 0.1
   quizzes = average(student["quizzes"]) * 0.3
   tests = average(student["tests"]) * 0.6
@@ -36,6 +36,7 @@ def get_average(student):
 
 
 def get_letter_grade(score):
+  """give a letter grade"""
   if score >= 90:
     return "A"
   elif score >= 80:
@@ -49,6 +50,7 @@ def get_letter_grade(score):
 
 
 def get_class_average(class_list):
+  """calculate global average for the class"""
   results = []
   for student in class_list:
     results.append(get_average(student))
@@ -63,3 +65,4 @@ for student in students:
   print get_average(student)
   print get_letter_grade(get_average(student))
 print get_class_average(students)
+print get_letter_grade(get_class_average(students))
