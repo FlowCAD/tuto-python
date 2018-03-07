@@ -35,9 +35,23 @@ def get_average(student):
   return homework + quizzes + tests
 
 
+def get_letter_grade(score):
+  if score >= 90:
+    return "A"
+  elif score >= 80:
+    return "B"
+  elif score >= 70:
+    return "C"
+  elif score >= 60:
+    return "D"
+  else:
+    return "F"
+  
+
 for student in students:
   print student["name"]
   print student["homework"]
   print student["quizzes"]
   print student["tests"]
   print get_average(student)
+  print get_letter_grade(get_average(student))
