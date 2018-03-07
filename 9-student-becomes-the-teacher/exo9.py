@@ -19,11 +19,6 @@ tyler = {
 
 students = [lloyd, alice, tyler]
 
-for student in students:
-  print student["name"]
-  print student["homework"]
-  print student["quizzes"]
-  print student["tests"]
 
 def average(numbers):
   """calculate average of marks"""
@@ -31,9 +26,18 @@ def average(numbers):
   total = total / len(numbers)
   return total
 
+
 def get_average(student):
   """calculate global average"""
   homework = average(student["homework"]) * 0.1
   quizzes = average(student["quizzes"]) * 0.3
   tests = average(student["tests"]) * 0.6
   return homework + quizzes + tests
+
+
+for student in students:
+  print student["name"]
+  print student["homework"]
+  print student["quizzes"]
+  print student["tests"]
+  print get_average(student)
