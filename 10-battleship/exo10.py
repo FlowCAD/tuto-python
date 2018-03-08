@@ -1,4 +1,6 @@
 # Battleship
+from random import randint
+
 board = []
 
 for i in range(5):
