@@ -16,3 +16,9 @@ shift_right = 0b1100 >> 2
 shift_left = 0b1 << 2
 print bin(shift_right)
 print bin(shift_left)
+
+
+# Operators
+print "0b1110 and 0b101 : ", bin(0b1110 & 0b101)
+print "0b1110 or 0b101 : ", bin(0b1110 | 0b101)
+print "0b1110 xor 0b101 : ", bin(0b1110 ^ 0b101)
