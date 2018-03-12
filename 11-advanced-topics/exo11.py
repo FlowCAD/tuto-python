@@ -38,3 +38,5 @@ print "middle_third: ", middle_third
 #Anonymous Functions
 my_list = range(16)
 print "by tree only: ", filter(lambda x: x % 3 == 0, my_list)
+squares = [x ** 2 for x in range(1, 11)]
+print "between 30 and 70: ", filter(lambda x : x >= 30 and x <= 70, squares)
