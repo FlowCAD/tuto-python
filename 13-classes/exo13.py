@@ -23,40 +23,33 @@ giraffe.description()
 panda.description()
 
 
-#More realistic exemple
-class ShoppingCart(object):
-  """Creates shopping cart objects for users of our fine website."""
-  items_in_cart = {}
-  def __init__(self, customer_name):
-    self.customer_name = customer_name
-
-  def add_item(self, product, price):
-    """Add product to the cart."""
-    if not product in self.items_in_cart:
-      self.items_in_cart[product] = price
-      print product + " added."
-    else:
-      print product + " is already in the cart."
-
-  def remove_item(self, product):
-    """Remove product from the cart."""
-    if product in self.items_in_cart:
-      del self.items_in_cart[product]
-      print product + " removed."
-    else:
-      print product + " is not in the cart."
-
-my_cart = ShoppingCart("Flo")
-my_cart.add_item("Guitar", 100)
-
-
 # Inheritance Syntax
-class Shape(object):
-  def __init__(self, number_of_sides):
-    self.number_of_sides = number_of_sides
+class Triangle(object):
+  number_of_sides = 3
+  def __init__(self, angle1, angle2, angle3):
+    self.angle1 = angle1
+    self.angle2 = angle2
+    self.angle3 = angle3
+    
+  def check_angles(self):
+    if (self.angle1 + self.angle2 + self.angle3) == 180:
+      return True
+    else:
+      return False
 
-class Triangle(Shape):
-  def __init__(self, side1, side2, side3):
-    self.side1 = side1
-    self.side2 = side2
-    self.side3 = side3
+class Equilateral(Triangle):
+  angle = 60
+  def __init__(self):
+    self.angle1 = self.angle
+    self.angle2 = self.angle
+    self.angle3 = self.angle
+
+  def check_angles(self):
+      return super(Equilateral, self).check_angles()
+
+
+my_triangle = Triangle(30, 60, 90)
+print my_triangle.number_of_sides
+print "angles of my_triangle: ", my_triangle.check_angles()
+my_equilateral_triangle = Equilateral()
+print "angles of my_equilateral_triangle: ", my_equilateral_triangle.check_angles()
