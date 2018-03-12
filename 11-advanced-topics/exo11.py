@@ -22,3 +22,8 @@ evens_to_50 = [i for i in range(51) if i % 2 == 0]
 print evens_to_50
 even_squares = [i ** 2 for i in range(1, 12) if (i ** 2) % 2 == 0]
 print even_squares
+
+
+#List Slicing
+l = [i ** 2 for i in range(1, 11)]  # Devrait être [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+print l[2:9:2]  # Donne [9, 25, 49, 81]
