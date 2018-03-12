@@ -33,3 +33,8 @@ middle_third = to_21[7:14]
 print "to_21: ", to_21
 print "odds: ", odds
 print "middle_third: ", middle_third
+
+
+#Anonymous Functions
+my_list = range(16)
+print "by tree only: ", filter(lambda x: x % 3 == 0, my_list)
