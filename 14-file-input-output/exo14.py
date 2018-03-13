@@ -17,3 +17,9 @@ my_file.close()
 #Writing data and automaticaly open/close the concerned file
 with open("text.txt", "w") as textfile:
   textfile.write("Success!")
+
+
+#Checking if the file is closed
+if not textfile.closed:
+  textfile.close()
+print textfile.closed
