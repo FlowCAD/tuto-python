@@ -12,3 +12,8 @@ my_file.close()
 my_file = open("output.txt", "r")
 print my_file.read()
 my_file.close()
+
+
+#Writing data and automaticaly open/close the concerned file
+with open("text.txt", "w") as textfile:
+  textfile.write("Success!")
